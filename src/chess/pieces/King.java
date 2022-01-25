@@ -12,6 +12,7 @@ public class King extends ChessPiece {
 	
 	public King(Board board, Color color, ChessMatch chessMatch) {
 		super(board, color);
+		this.chessMatch = chessMatch;
 	}
 	
 	public String toString() {
@@ -28,9 +29,7 @@ public class King extends ChessPiece {
 		return p != null && p instanceof Rook && p.getColor() == getColor() && p.getMoveCount() == 0;
 	}
 	
-	/**
-	 *
-	 */
+
 	@Override
 	public boolean[][] possibleMoves() {
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
